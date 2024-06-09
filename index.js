@@ -6,5 +6,7 @@ element.addEventListener("click", function (event) {
     headers: {
       Accept: "application/json",
     },
-  }).then((response) => console.log(response))
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
 })
